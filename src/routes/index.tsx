@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const BOOKING_URL = "https://www.booking.com";
+const BOOKING_URL = "https://www.booking.com/hotel/it/il-castello-di-alberico.it.html";
 
 const NAV_LINKS = [
   { href: "#storia", label: "Storia" },
