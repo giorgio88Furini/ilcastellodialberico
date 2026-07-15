@@ -77,14 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna" },
+      {
+        name: "description",
+        content:
+          "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Il Castello di Alberico" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +93,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          name: "Il Castello di Alberico",
+          description:
+            "Bed & Breakfast in un casale del 1700 nel cuore della Romagna",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Via Gesuita, 29",
+            addressLocality: "Cotignola",
+            addressRegion: "RA",
+            postalCode: "48033",
+            addressCountry: "IT",
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "9.0",
+            bestRating: "10",
+            reviewCount: "40",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
