@@ -8,11 +8,6 @@ import {
   CigaretteOff,
   Star,
   MapPin,
-  Phone,
-  Mail,
-  MessageCircle,
-  Instagram,
-  Facebook,
   Menu,
   X,
   ArrowRight,
@@ -20,6 +15,8 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
+import { Link } from "@tanstack/react-router";
+import { CookieConsent } from "@/components/site/cookie-consent";
 import heroCasale from "@/assets/hero-casale.jpg";
 import storyInterior from "@/assets/story-interior.jpg";
 import roomMatrimoniale from "@/assets/room-matrimoniale.jpg";
@@ -605,12 +602,6 @@ function Index() {
                 }
               />
             </div>
-
-            <div className="flex flex-wrap gap-3">
-              <ContactChip icon={Phone} label="Telefono" />
-              <ContactChip icon={Mail} label="Email" />
-              <ContactChip icon={MessageCircle} label="WhatsApp" />
-            </div>
           </div>
 
           <div className="reveal" data-delay="150">
@@ -662,7 +653,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="bg-[#1f1d1a] text-cream/70 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-10 mb-12">
+          <div className="grid md:grid-cols-2 gap-10 mb-12">
             <div>
               <h4 className="font-serif italic text-2xl text-cream mb-3">Il Castello di Alberico</h4>
               <p className="text-sm leading-relaxed">
@@ -670,25 +661,22 @@ function Index() {
                 Cotignola (RA) — Italia
               </p>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:justify-center">
-              {["Camere", "Colazione", "Recensioni", "Contatti", "Come raggiungerci"].map((l) => (
-                <a key={l} href="#" className="hover:text-gold transition-colors">
-                  {l}
-                </a>
-              ))}
-            </div>
-            <div className="flex gap-3 md:justify-end">
-              <SocialIcon icon={Instagram} />
-              <SocialIcon icon={Facebook} />
-              <SocialIcon icon={MessageCircle} />
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:justify-end">
+              <a href="#storia" className="hover:text-gold transition-colors">Storia</a>
+              <a href="#camere" className="hover:text-gold transition-colors">Camere</a>
+              <a href="#colazione" className="hover:text-gold transition-colors">Colazione</a>
+              <a href="#recensioni" className="hover:text-gold transition-colors">Recensioni</a>
+              <a href="#contatti" className="hover:text-gold transition-colors">Dove trovarci</a>
+              <Link to="/privacy" className="hover:text-gold transition-colors">Privacy &amp; Cookie</Link>
             </div>
           </div>
           <div className="pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between gap-3 text-[10px] uppercase tracking-[0.25em] text-cream/40">
-            <p>© 2025 Il Castello di Alberico · P.IVA 00000000000 · Tutti i diritti riservati</p>
+            <p>© {new Date().getFullYear()} Il Castello di Alberico · Tutti i diritti riservati · All rights reserved</p>
             <p>Cotignola · Romagna · Italia</p>
           </div>
         </div>
       </footer>
+      <CookieConsent />
     </div>
   );
 }
@@ -715,25 +703,3 @@ function InfoRow({
   );
 }
 
-function ContactChip({ icon: Icon, label }: { icon: typeof Phone; label: string }) {
-  return (
-    <a
-      href="#"
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-charcoal/15 text-[12px] text-charcoal/80 hover:border-gold hover:text-gold transition-colors"
-    >
-      <Icon className="size-3.5" /> {label}
-    </a>
-  );
-}
-
-function SocialIcon({ icon: Icon }: { icon: typeof Instagram }) {
-  return (
-    <a
-      href="#"
-      className="size-10 grid place-items-center rounded-full border border-cream/15 hover:bg-cream/10 hover:border-gold transition-colors"
-      aria-label="Social"
-    >
-      <Icon className="size-4" />
-    </a>
-  );
-}
