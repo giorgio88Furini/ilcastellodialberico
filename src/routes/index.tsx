@@ -214,8 +214,8 @@ function Index() {
             ))}
             <a
               href={BOOKING_URL}
-              target="_blank"
-              rel="noreferrer"
+              target="_self"
+              rel="noopener noreferrer"
               className="bg-gold text-cream px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide hover:bg-gold/90 ring-1 ring-gold/60 transition-all hover:scale-[1.03] shadow-sm"
             >
               Prenota
@@ -256,8 +256,8 @@ function Index() {
           ))}
           <a
             href={BOOKING_URL}
-            target="_blank"
-            rel="noreferrer"
+            target="_self"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="mt-4 bg-gold text-cream px-8 py-4 rounded-full text-base font-sans font-medium"
           >
@@ -300,8 +300,8 @@ function Index() {
           </p>
           <a
             href={BOOKING_URL}
-            target="_blank"
-            rel="noreferrer"
+            target="_self"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-8 py-4 rounded-full text-base font-medium tracking-wide shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all"
           >
             Prenota il tuo soggiorno
@@ -418,8 +418,8 @@ function Index() {
                   </p>
                   <a
                     href={BOOKING_URL}
-                    target="_blank"
-                    rel="noreferrer"
+                    target="_self"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-terracotta group-hover:gap-3 transition-all"
                   >
                     Scopri e prenota <ArrowRight className="size-4" />
@@ -640,8 +640,8 @@ function Index() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={BOOKING_URL}
-              target="_blank"
-              rel="noreferrer"
+              target="_self"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-10 py-4 rounded-full font-medium shadow-xl hover:scale-[1.03] transition-all"
             >
               Prenota ora su Booking.com <ArrowRight className="size-4" />
