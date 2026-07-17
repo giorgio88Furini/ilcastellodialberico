@@ -2,16 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   Wifi,
-  Car,
   Coffee,
   Bike,
   CigaretteOff,
   Star,
-  MapPin,
   Menu,
   X,
   ArrowRight,
-  Clock,
   BadgeCheck,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
