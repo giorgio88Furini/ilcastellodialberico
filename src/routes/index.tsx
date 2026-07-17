@@ -7,11 +7,9 @@ import {
   Bike,
   CigaretteOff,
   Star,
-  MapPin,
   Menu,
   X,
   ArrowRight,
-  Clock,
   BadgeCheck,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
@@ -39,7 +37,6 @@ const NAV_LINKS = [
   { href: "#camere", label: "Camere" },
   { href: "#colazione", label: "Colazione" },
   { href: "#recensioni", label: "Recensioni" },
-  { href: "#contatti", label: "Contatti" },
 ];
 
 const REVIEWS = [
@@ -571,52 +568,6 @@ function Index() {
         </div>
       </section>
 
-      {/* INFO PRATICHE */}
-      <section id="contatti" className="bg-cream py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 lg:gap-20">
-          <div className="flex flex-col gap-10 reveal">
-            <div>
-              <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta font-medium">
-                Informazioni Pratiche
-              </span>
-              <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight">
-                Dove trovarci
-              </h2>
-            </div>
-
-            <div className="space-y-5 text-sm">
-              <InfoRow icon={Clock} title="Check-in / Check-out" body="Check-in: 14:00 — 22:00 · Check-out: 07:00 — 10:30" />
-              <InfoRow icon={MapPin} title="Indirizzo" body="29 Via Gesuita, 48033 Cotignola (RA), Italia" />
-              <InfoRow
-                icon={Car}
-                title="Come raggiungerci"
-                body={
-                  <>
-                    Aeroporto di Forlì: 35 km · Stazione di Ravenna: 30 km
-                    <br />Parcheggio gratuito sulla proprietà.
-                    <br />
-                    <span className="text-charcoal/60">
-                      Posizione comoda anche per la Clinica Maria Cecilia Hospital.
-                    </span>
-                  </>
-                }
-              />
-            </div>
-          </div>
-
-          <div className="reveal" data-delay="150">
-            <div className="w-full aspect-[4/5] md:aspect-square rounded-sm overflow-hidden shadow-xl ring-1 ring-black/5">
-              <iframe
-                title="Mappa · Il Castello di Alberico"
-                src="https://www.google.com/maps?q=29+Via+Gesuita,+Cotignola+RA,+Italia&output=embed"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FINAL CTA */}
       <section className="relative overflow-hidden py-24 md:py-32 text-center">
@@ -628,22 +579,14 @@ function Index() {
           <p className="text-cream/85 text-lg mb-12 max-w-xl mx-auto">
             Lasciati coccolare dall'ospitalità autentica romagnola. La tua casa in Emilia-Romagna ti aspetta.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={BOOKING_URL}
-              target="_self"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-10 py-4 rounded-full font-medium shadow-xl hover:scale-[1.03] transition-all"
-            >
-              Prenota ora su Booking.com <ArrowRight className="size-4" />
-            </a>
-            <a
-              href="#contatti"
-              className="inline-flex items-center gap-2 border border-cream/40 hover:bg-cream/10 text-cream px-10 py-4 rounded-full font-medium transition-colors"
-            >
-              Contattaci direttamente
-            </a>
-          </div>
+          <a
+            href={BOOKING_URL}
+            target="_self"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-10 py-4 rounded-full font-medium shadow-xl hover:scale-[1.03] transition-all"
+          >
+            Prenota ora su Booking.com <ArrowRight className="size-4" />
+          </a>
           <p className="mt-10 text-[11px] uppercase tracking-[0.3em] text-cream/70">
             Rimborsiamo le differenze di prezzo · Prenota con fiducia
           </p>
@@ -652,27 +595,17 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-[#1f1d1a] text-cream/70 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10 mb-12">
-            <div>
-              <h4 className="font-serif italic text-2xl text-cream mb-3">Il Castello di Alberico</h4>
-              <p className="text-sm leading-relaxed">
-                29 Via Gesuita, 48033<br />
-                Cotignola (RA) — Italia
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:justify-end">
-              <a href="#storia" className="hover:text-gold transition-colors">Storia</a>
-              <a href="#camere" className="hover:text-gold transition-colors">Camere</a>
-              <a href="#colazione" className="hover:text-gold transition-colors">Colazione</a>
-              <a href="#recensioni" className="hover:text-gold transition-colors">Recensioni</a>
-              <a href="#contatti" className="hover:text-gold transition-colors">Dove trovarci</a>
-              <Link to="/privacy" className="hover:text-gold transition-colors">Privacy &amp; Cookie</Link>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h4 className="font-serif italic text-2xl text-cream mb-6">Il Castello di Alberico</h4>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-12">
+            <a href="#storia" className="hover:text-gold transition-colors">Storia</a>
+            <a href="#camere" className="hover:text-gold transition-colors">Camere</a>
+            <a href="#colazione" className="hover:text-gold transition-colors">Colazione</a>
+            <a href="#recensioni" className="hover:text-gold transition-colors">Recensioni</a>
+            <Link to="/privacy" className="hover:text-gold transition-colors">Privacy &amp; Cookie</Link>
           </div>
-          <div className="pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between gap-3 text-[10px] uppercase tracking-[0.25em] text-cream/40">
+          <div className="pt-6 border-t border-cream/10 text-[10px] uppercase tracking-[0.25em] text-cream/40">
             <p>© {new Date().getFullYear()} Il Castello di Alberico · Tutti i diritti riservati · All rights reserved</p>
-            <p>Cotignola · Romagna · Italia</p>
           </div>
         </div>
       </footer>
@@ -681,25 +614,4 @@ function Index() {
   );
 }
 
-function InfoRow({
-  icon: Icon,
-  title,
-  body,
-}: {
-  icon: typeof Clock;
-  title: string;
-  body: React.ReactNode;
-}) {
-  return (
-    <div className="flex gap-4 pb-5 border-b border-charcoal/10">
-      <div className="size-10 shrink-0 rounded-full bg-gold/10 grid place-items-center">
-        <Icon className="size-4 text-gold" strokeWidth={1.75} />
-      </div>
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-charcoal mb-1">{title}</p>
-        <p className="text-sm text-charcoal/75 leading-relaxed">{body}</p>
-      </div>
-    </div>
-  );
-}
 
