@@ -570,52 +570,6 @@ function Index() {
         </div>
       </section>
 
-      {/* INFO PRATICHE */}
-      <section id="contatti" className="bg-cream py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 lg:gap-20">
-          <div className="flex flex-col gap-10 reveal">
-            <div>
-              <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta font-medium">
-                Informazioni Pratiche
-              </span>
-              <h2 className="font-serif text-4xl md:text-5xl mt-4 leading-tight">
-                Dove trovarci
-              </h2>
-            </div>
-
-            <div className="space-y-5 text-sm">
-              <InfoRow icon={Clock} title="Check-in / Check-out" body="Check-in: 14:00 — 22:00 · Check-out: 07:00 — 10:30" />
-              <InfoRow icon={MapPin} title="Indirizzo" body="29 Via Gesuita, 48033 Cotignola (RA), Italia" />
-              <InfoRow
-                icon={Car}
-                title="Come raggiungerci"
-                body={
-                  <>
-                    Aeroporto di Forlì: 35 km · Stazione di Ravenna: 30 km
-                    <br />Parcheggio gratuito sulla proprietà.
-                    <br />
-                    <span className="text-charcoal/60">
-                      Posizione comoda anche per la Clinica Maria Cecilia Hospital.
-                    </span>
-                  </>
-                }
-              />
-            </div>
-          </div>
-
-          <div className="reveal" data-delay="150">
-            <div className="w-full aspect-[4/5] md:aspect-square rounded-sm overflow-hidden shadow-xl ring-1 ring-black/5">
-              <iframe
-                title="Mappa · Il Castello di Alberico"
-                src="https://www.google.com/maps?q=29+Via+Gesuita,+Cotignola+RA,+Italia&output=embed"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FINAL CTA */}
       <section className="relative overflow-hidden py-24 md:py-32 text-center">
