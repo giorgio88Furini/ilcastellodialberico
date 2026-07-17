@@ -616,25 +616,4 @@ function Index() {
   );
 }
 
-function InfoRow({
-  icon: Icon,
-  title,
-  body,
-}: {
-  icon: typeof Clock;
-  title: string;
-  body: React.ReactNode;
-}) {
-  return (
-    <div className="flex gap-4 pb-5 border-b border-charcoal/10">
-      <div className="size-10 shrink-0 rounded-full bg-gold/10 grid place-items-center">
-        <Icon className="size-4 text-gold" strokeWidth={1.75} />
-      </div>
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-charcoal mb-1">{title}</p>
-        <p className="text-sm text-charcoal/75 leading-relaxed">{body}</p>
-      </div>
-    </div>
-  );
-}
 
