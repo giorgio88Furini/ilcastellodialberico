@@ -597,27 +597,17 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-[#1f1d1a] text-cream/70 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10 mb-12">
-            <div>
-              <h4 className="font-serif italic text-2xl text-cream mb-3">Il Castello di Alberico</h4>
-              <p className="text-sm leading-relaxed">
-                29 Via Gesuita, 48033<br />
-                Cotignola (RA) — Italia
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:justify-end">
-              <a href="#storia" className="hover:text-gold transition-colors">Storia</a>
-              <a href="#camere" className="hover:text-gold transition-colors">Camere</a>
-              <a href="#colazione" className="hover:text-gold transition-colors">Colazione</a>
-              <a href="#recensioni" className="hover:text-gold transition-colors">Recensioni</a>
-              <a href="#contatti" className="hover:text-gold transition-colors">Dove trovarci</a>
-              <Link to="/privacy" className="hover:text-gold transition-colors">Privacy &amp; Cookie</Link>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h4 className="font-serif italic text-2xl text-cream mb-6">Il Castello di Alberico</h4>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-12">
+            <a href="#storia" className="hover:text-gold transition-colors">Storia</a>
+            <a href="#camere" className="hover:text-gold transition-colors">Camere</a>
+            <a href="#colazione" className="hover:text-gold transition-colors">Colazione</a>
+            <a href="#recensioni" className="hover:text-gold transition-colors">Recensioni</a>
+            <Link to="/privacy" className="hover:text-gold transition-colors">Privacy &amp; Cookie</Link>
           </div>
-          <div className="pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between gap-3 text-[10px] uppercase tracking-[0.25em] text-cream/40">
+          <div className="pt-6 border-t border-cream/10 text-[10px] uppercase tracking-[0.25em] text-cream/40">
             <p>© {new Date().getFullYear()} Il Castello di Alberico · Tutti i diritti riservati · All rights reserved</p>
-            <p>Cotignola · Romagna · Italia</p>
           </div>
         </div>
       </footer>
