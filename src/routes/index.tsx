@@ -39,7 +39,6 @@ const NAV_LINKS = [
   { href: "#camere", label: "Camere" },
   { href: "#colazione", label: "Colazione" },
   { href: "#recensioni", label: "Recensioni" },
-  { href: "#contatti", label: "Contatti" },
 ];
 
 const REVIEWS = [
