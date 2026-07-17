@@ -15,7 +15,7 @@ import {
 import { useReveal } from "@/hooks/use-reveal";
 import { Link } from "@tanstack/react-router";
 import { CookieConsent } from "@/components/site/cookie-consent";
-import heroCasale from "@/assets/hero-casale.jpg";
+import heroCasale from "@/assets/hero-courtyard-tower.webp.asset.json";
 import storyInterior from "@/assets/story-interior.jpg";
 import roomMatrimoniale from "@/assets/room-matrimoniale.jpg";
 import roomFrancese from "@/assets/room-francese.jpg";
