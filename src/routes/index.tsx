@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   Wifi,
+  Car,
   Coffee,
   Bike,
   CigaretteOff,
