@@ -581,22 +581,14 @@ function Index() {
           <p className="text-cream/85 text-lg mb-12 max-w-xl mx-auto">
             Lasciati coccolare dall'ospitalità autentica romagnola. La tua casa in Emilia-Romagna ti aspetta.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={BOOKING_URL}
-              target="_self"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-10 py-4 rounded-full font-medium shadow-xl hover:scale-[1.03] transition-all"
-            >
-              Prenota ora su Booking.com <ArrowRight className="size-4" />
-            </a>
-            <a
-              href="#contatti"
-              className="inline-flex items-center gap-2 border border-cream/40 hover:bg-cream/10 text-cream px-10 py-4 rounded-full font-medium transition-colors"
-            >
-              Contattaci direttamente
-            </a>
-          </div>
+          <a
+            href={BOOKING_URL}
+            target="_self"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-cream px-10 py-4 rounded-full font-medium shadow-xl hover:scale-[1.03] transition-all"
+          >
+            Prenota ora su Booking.com <ArrowRight className="size-4" />
+          </a>
           <p className="mt-10 text-[11px] uppercase tracking-[0.3em] text-cream/70">
             Rimborsiamo le differenze di prezzo · Prenota con fiducia
           </p>
