@@ -15,7 +15,7 @@ import {
 import { useReveal } from "@/hooks/use-reveal";
 import { Link } from "@tanstack/react-router";
 import { CookieConsent } from "@/components/site/cookie-consent";
-import heroCasale from "@/assets/hero-casale.jpg";
+import heroCasale from "@/assets/hero-courtyard-tower.webp.asset.json";
 import storyInterior from "@/assets/story-interior.jpg";
 import roomMatrimoniale from "@/assets/room-matrimoniale.jpg";
 import roomFrancese from "@/assets/room-francese.jpg";
@@ -267,11 +267,11 @@ function Index() {
           style={{ transform: `translate3d(0, ${scrollY * 0.25}px, 0)` }}
         >
           <img
-            src={heroCasale}
-            alt="Il Castello di Alberico al tramonto"
-            width={1920}
-            height={1280}
-            className="w-full h-[115%] object-cover"
+            src={heroCasale.url}
+            alt="Il Castello di Alberico — cortile fiorito con vista sul campanile"
+            width={1148}
+            height={1454}
+            className="w-full h-[115%] object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/25 to-charcoal/60" />
         </div>
