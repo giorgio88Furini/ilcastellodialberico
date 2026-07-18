@@ -1,0 +1,14 @@
+# Il Castello di Alberico
+
+> Bed & Breakfast di charme in un casale del 1700 a Cotignola, nel cuore della Romagna. Camere eleganti, colazione all'italiana, ospitalità autentica. 9.0/10 su Booking.
+
+Indirizzo: 29 Via Gesuita, 48033 Cotignola (RA), Italia.
+
+## Pages
+
+- [Home](/): Storia del casale, camere disponibili, colazione, recensioni verificate degli ospiti e attrazioni nella Romagna.
+- [Privacy & Cookie Policy](/privacy): Informativa GDPR e uso dei cookie tecnici.
+
+## Optional
+
+- [Prenotazione su Booking.com](https://www.booking.com/hotel/it/il-castello-di-alberico.it.html): Prenotazione diretta e disponibilità aggiornata.
