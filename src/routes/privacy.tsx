@@ -19,11 +19,11 @@ export const Route = createFileRoute("/privacy")({
       },
       {
         property: "og:url",
-        content: "https://romagna-welcome.lovable.app/privacy",
+        content: "https://ilcastellodialberico.lovable.app/privacy",
       },
     ],
     links: [
-      { rel: "canonical", href: "https://romagna-welcome.lovable.app/privacy" },
+      { rel: "canonical", href: "https://ilcastellodialberico.lovable.app/privacy" },
     ],
   }),
 });
