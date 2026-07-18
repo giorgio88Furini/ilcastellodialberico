@@ -36,11 +36,11 @@ export const Route = createFileRoute("/")({
         content:
           "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking.",
       },
-      { property: "og:title", content: "Il Castello di Alberico | B&B a Cotignola, Romagna" },
+      { property: "og:title", content: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna" },
       {
         property: "og:description",
         content:
-          "Casale del 1700 nel cuore della Romagna. Camere eleganti, colazione all'italiana, ospitalità autentica.",
+          "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://ilcastellodialberico.lovable.app/" },
