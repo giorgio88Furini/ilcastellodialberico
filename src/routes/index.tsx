@@ -28,6 +28,25 @@ import cyclingImg from "@/assets/cycling.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna" },
+      {
+        name: "description",
+        content:
+          "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking.",
+      },
+      { property: "og:title", content: "Il Castello di Alberico | B&B a Cotignola, Romagna" },
+      {
+        property: "og:description",
+        content:
+          "Casale del 1700 nel cuore della Romagna. Camere eleganti, colazione all'italiana, ospitalità autentica.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://ilcastellodialberico.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://ilcastellodialberico.lovable.app/" }],
+  }),
 });
 
 const BOOKING_URL = "https://www.booking.com/hotel/it/il-castello-di-alberico.it.html";
@@ -287,7 +306,7 @@ function Index() {
             Bed &amp; Breakfast · Cotignola · Romagna
           </p>
           <h1 className="font-serif text-4xl md:text-6xl text-cream font-medium leading-[1.05] mb-6 text-balance">
-            Il Castello di Alberico
+            Il Castello di Alberico — Bed &amp; Breakfast in Romagna
           </h1>
           <p className="font-serif italic text-lg md:text-2xl text-cream/90 mb-10 text-pretty">
             Dove la storia ti accoglie come a casa
@@ -560,7 +579,7 @@ function Index() {
                     className="w-full aspect-[3/4] object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"
                   />
                 </div>
-                <h4 className="font-serif text-2xl mb-2">{e.title}</h4>
+                <h3 className="font-serif text-2xl mb-2">{e.title}</h3>
                 <p className="text-sm text-cream/60 leading-relaxed">{e.desc}</p>
               </article>
             ))}
