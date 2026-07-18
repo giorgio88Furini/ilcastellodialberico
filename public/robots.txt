@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ilcastellodialberico.lovable.app/sitemap.xml
