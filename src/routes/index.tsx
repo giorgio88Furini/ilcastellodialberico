@@ -21,10 +21,9 @@ import roomMatrimoniale from "@/assets/room-matrimoniale.jpg";
 import roomFrancese from "@/assets/room-francese.jpg";
 import roomTripla from "@/assets/room-tripla.jpg";
 import breakfastImg from "@/assets/breakfast.jpg";
-import ravennaImg from "@/assets/ravenna.jpg";
-import cotignolaImg from "@/assets/cotignola.jpg";
-import mirabilandiaImg from "@/assets/mirabilandia.jpg";
-import cyclingImg from "@/assets/cycling.jpg";
+import exploreCycling from "@/assets/explore-cycling.webp.asset.json";
+import exploreArt from "@/assets/explore-art.webp.asset.json";
+import exploreCoast from "@/assets/explore-coast.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -155,24 +154,19 @@ const ROOMS = [
 
 const EXPLORE = [
   {
-    image: mirabilandiaImg,
-    title: "Mirabilandia",
-    desc: "A soli 42 km, il parco divertimenti più amato d'Italia.",
+    image: exploreCycling.url,
+    title: "Cycling & Nature",
+    desc: "Take advantage of our free bicycles to explore the surrounding countryside, the street art of Cotignola, and the peaceful bike paths along the Senio river.",
   },
   {
-    image: ravennaImg,
-    title: "Ravenna",
-    desc: "A 30 km, capitale dei mosaici bizantini, Patrimonio UNESCO.",
+    image: exploreArt.url,
+    title: "Art & Historic Towns",
+    desc: "Just 30 km away lies Ravenna with its famous UNESCO mosaics. Nearby, you can also discover the ceramics of Faenza and the medieval village of Brisighella.",
   },
   {
-    image: cotignolaImg,
-    title: "Cotignola",
-    desc: "Un borgo autentico tra storia, gastronomia e tradizioni romagnole.",
-  },
-  {
-    image: cyclingImg,
-    title: "Ciclismo",
-    desc: "Biciclette gratuite per esplorare la campagna circostante.",
+    image: exploreCoast.url,
+    title: "Mirabilandia & Coast",
+    desc: "About 40 km away, you'll find Italy's most famous amusement park for a fun family day, alongside the renowned beaches of Cervia and Milano Marittima.",
   },
 ];
 
@@ -566,7 +560,7 @@ function Index() {
               Esplora la Romagna
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {EXPLORE.map((e, i) => (
               <article key={e.title} className="group cursor-pointer reveal" data-delay={i * 100}>
                 <div className="overflow-hidden rounded-sm mb-5">
