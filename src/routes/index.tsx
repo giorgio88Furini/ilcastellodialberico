@@ -155,18 +155,18 @@ const ROOMS = [
 const EXPLORE = [
   {
     image: exploreCycling.url,
-    title: "Cycling & Nature",
-    desc: "Take advantage of our free bicycles to explore the surrounding countryside, the street art of Cotignola, and the peaceful bike paths along the Senio river.",
+    title: "Ciclismo & Natura",
+    desc: "Approfitta delle nostre biciclette gratuite per esplorare la campagna circostante, la street art di Cotignola e le tranquille piste ciclabili lungo il fiume Senio.",
   },
   {
     image: exploreArt.url,
-    title: "Art & Historic Towns",
-    desc: "Just 30 km away lies Ravenna with its famous UNESCO mosaics. Nearby, you can also discover the ceramics of Faenza and the medieval village of Brisighella.",
+    title: "Arte e Borghi Storici",
+    desc: "A soli 30 km si trova Ravenna con i suoi famosi mosaici UNESCO. Nelle vicinanze puoi anche scoprire la ceramica di Faenza e il borgo medievale di Brisighella.",
   },
   {
     image: exploreCoast.url,
-    title: "Mirabilandia & Coast",
-    desc: "About 40 km away, you'll find Italy's most famous amusement park for a fun family day, alongside the renowned beaches of Cervia and Milano Marittima.",
+    title: "Mirabilandia e Costa",
+    desc: "A circa 40 km trovi il parco divertimenti più famoso d'Italia per una giornata divertente in famiglia, insieme alle rinomate spiagge di Cervia e Milano Marittima.",
   },
 ];
 
