@@ -2,6 +2,30 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond-italic-latin.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -62,31 +86,72 @@
 }
 
 @theme {
-  --color-terracotta: #C4724E;
-  --color-olive: #5C6B3C;
-  --color-cream: #FAF6F0;
-  --color-gold: #B8963E;
-  --color-charcoal: #2C2C2C;
-  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-terracotta: #c4724e;
+  --color-olive: #5c6b3c;
+  --color-cream: #faf6f0;
+  --color-gold: #b8963e;
+  --color-charcoal: #2c2c2c;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes bar-grow {
-  from { width: 0%; }
-  to { width: var(--final-width, 100%); }
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--final-width, 100%);
+  }
 }
 
-.reveal { opacity: 0; }
-.reveal.is-visible { animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.rating-bar { width: 0%; }
-.rating-bar.is-visible { animation: bar-grow 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.reveal {
+  opacity: 1;
+}
+.reveal.is-visible {
+  animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.rating-bar {
+  width: var(--final-width, 100%);
+}
+.rating-bar.is-visible {
+  animation: bar-grow 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
 
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); background: var(--color-cream); color: var(--color-charcoal); }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+body {
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+:focus-visible {
+  outline: 3px solid #8f482f;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 :root {
   --radius: 0.625rem;
