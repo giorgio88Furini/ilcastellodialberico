@@ -17,16 +17,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Pagina non trovata</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          La pagina che cerchi non esiste o è stata spostata.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Torna alla home
           </Link>
         </div>
       </div>
@@ -34,7 +34,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -45,10 +45,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Non è stato possibile caricare la pagina
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Si è verificato un problema. Puoi riprovare o tornare alla home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -58,13 +58,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            Riprova
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Go home
+            Torna alla home
           </a>
         </div>
       </div>
@@ -81,17 +81,39 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking.",
+          "B&B a Cotignola in una dimora storica di fine Seicento. Camere confortevoli, colazione a buffet, giardino e ospitalità familiare nella Bassa Romagna.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Il Castello di Alberico" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna" },
-      { name: "twitter:title", content: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna" },
-      { property: "og:description", content: "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking." },
-      { name: "twitter:description", content: "B&B di charme in un casale del 1700 a Cotignola. Colazione all'italiana, camere eleganti, ospitalità autentica romagnola. 9.0/10 su Booking." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ae6e34c0-8ad0-4206-8a2a-98483f67b978" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ae6e34c0-8ad0-4206-8a2a-98483f67b978" },
+      {
+        property: "og:title",
+        content: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna",
+      },
+      {
+        name: "twitter:title",
+        content: "Il Castello di Alberico | Bed & Breakfast a Cotignola, Romagna",
+      },
+      {
+        property: "og:description",
+        content:
+          "B&B a Cotignola in una dimora storica di fine Seicento. Camere confortevoli, colazione a buffet, giardino e ospitalità familiare nella Bassa Romagna.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "B&B a Cotignola in una dimora storica di fine Seicento. Camere confortevoli, colazione a buffet, giardino e ospitalità familiare nella Bassa Romagna.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ae6e34c0-8ad0-4206-8a2a-98483f67b978",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ae6e34c0-8ad0-4206-8a2a-98483f67b978",
+      },
     ],
     links: [
       {
@@ -99,11 +121,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+        rel: "preload",
+        href: "/fonts/cormorant-garamond-latin.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-latin.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
     ],
     scripts: [
@@ -111,10 +141,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LodgingBusiness",
+          "@type": "BedAndBreakfast",
           name: "Il Castello di Alberico",
           description:
-            "Bed & Breakfast in un casale del 1700 nel cuore della Romagna",
+            "Bed & Breakfast a Cotignola in una dimora storica di fine Seicento, nel cuore della Bassa Romagna.",
+          url: "https://bebilcastellodialberico.it/",
+          telephone: "+39 371 442 7228",
+          email: "ilcastellodialberico@gmail.com",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Via Gesuita, 29",
@@ -123,12 +156,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             postalCode: "48033",
             addressCountry: "IT",
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "9.0",
-            bestRating: "10",
-            reviewCount: "40",
-          },
+          sameAs: [
+            "https://www.booking.com/hotel/it/il-castello-di-alberico.it.html",
+            "https://www.facebook.com/p/B-B-Il-Castello-di-Alberico-Cotignola-100063986021415/",
+          ],
         }),
       },
     ],
@@ -141,7 +172,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="it">
       <head>
         <HeadContent />
       </head>

@@ -3,7 +3,8 @@ import { defineTool } from "@lovable.dev/mcp-js";
 export default defineTool({
   name: "get_property_info",
   title: "Property information",
-  description: "Returns the name, address, description, and booking URL of Il Castello di Alberico.",
+  description:
+    "Returns the name, address, description, and booking URL of Il Castello di Alberico.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

@@ -18,8 +18,7 @@ const ROOMS = [
   {
     id: "francese",
     name: "Camera Francese",
-    description:
-      "Camera raffinata con bagno moderno rustico, vanity in legno e travi a vista.",
+    description: "Camera raffinata con bagno moderno rustico, vanity in legno e travi a vista.",
     capacity: 2,
   },
 ];
@@ -27,7 +26,8 @@ const ROOMS = [
 export default defineTool({
   name: "list_rooms",
   title: "List rooms",
-  description: "Lists the rooms available at Il Castello di Alberico with capacity and description.",
+  description:
+    "Lists the rooms available at Il Castello di Alberico with capacity and description.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({
